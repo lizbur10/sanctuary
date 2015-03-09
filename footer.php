@@ -11,11 +11,13 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sanctuary' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'sanctuary' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'sanctuary' ), 'sanctuary', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<nav class="footer-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer_menu' ) ); ?>
+		</nav><!-- #footer-navigation -->
+
+		<div class="copyright-info alignright">
+			<p>&copy; copyright Sanctuary Eco-Retreat 2014</p>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

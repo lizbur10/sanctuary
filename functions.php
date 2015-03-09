@@ -51,6 +51,7 @@ function sanctuary_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'sanctuary' ),
+		'footer_menu' => __( 'Footer Menu', 'sanctuary' )
 	) );
 
 	/*
@@ -102,9 +103,11 @@ add_action( 'widgets_init', 'sanctuary_widgets_init' );
 function sanctuary_scripts() {
 	wp_enqueue_style( 'sanctuary-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'sanctuary-google-fonts', 'http://fonts.googleapis.com/css?family=Arvo:400,700|Open+Sans:400,700|Open+Sans+Condensed:300');
+
 	wp_enqueue_script( 'sanctuary-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'sanctuary-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'sanctuary-skip-link-enocus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -136,3 +139,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+?>
