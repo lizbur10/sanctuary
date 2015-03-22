@@ -12,7 +12,12 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<nav class="footer-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer_menu' ) ); ?>
+			<ul class="social-menu">
+				<li><a target="_blank" href='https://tumblr.com'><i class="fa fa-tumblr"></i></a></li>
+				<li><a target="_blank" href='https://twitter.com'><i class="fa fa-twitter"></i></a></li>
+				<li><a target="_blank" href='https://pinterest.com'><i class="fa fa-pinterest"></i></a></li>
+				<li><a target="_blank" href='https://facebook.com'><i class="fa fa-facebook-square"></i></a></li>
+			</ul>
 		</nav><!-- #footer-navigation -->
 
 		<div class="copyright-info alignright">

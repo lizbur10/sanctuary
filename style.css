@@ -341,30 +341,6 @@ big {
 	font-size: 125%;
 }
 
-h1.site-title {
-	font-family: 'Arvo';
-	font-size: 5.25em;
-	margin: 0 0 0 2rem;
-	letter-spacing: -0.5px;
-}
-
-h1.site-title a {
-	text-decoration: none;
-}
-
-h1.site-title a:visited {
-	color: inherit;
-}
-
-h2.site-description {
-	font-family: 'Open Sans Condensed';
-	font-size: 1.75em;
-	letter-spacing: 0.1px;
-	margin: -2rem 0 0 2.5rem;
-
-}
-
-
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -379,7 +355,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #000; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -543,39 +519,48 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+/*CHANGES HERE FOR SANCTUARY  .main-navigation */
+
 .main-navigation {
-	display: inline;
 	position: absolute;
-	top: 88px;
+	clear: both;
+	display: block;
+	float: left;
+	width: 960px;
+	margin-left: 0;
+	top: 8px;
 	z-index: 1;
 }
 
-
 .main-navigation ul {
 	list-style: none;
-	margin-left: 450px;
-	padding: 30px;
+	padding-left: 0;
+	margin: -8px 0 0 438px;
+	padding: 28px 0 0 36px;
 	font-family: arvo;
 	text-transform: uppercase;
+	z-index: 1;
 }
 
 .main-navigation li {
 	float: left;
 	position: relative;
 	padding: 10px;
+    font-size: .75rem;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+    color: white;
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 1.6em;
 	left: -999em;
-	z-index: 99999;
+	width: 250px;
 }
 
 .main-navigation ul ul ul {
@@ -584,29 +569,38 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 210px;
 }
 
-.main-navigation ul ul li {
+.main-navigation ul ul li a {
+	display: block;
+	margin-bottom: -21px;
+	padding: 10px 5px;
+	color: black;
+	border: solid 1px lightgray;
+	text-align: center;
+	background-color: white;
+}
 
+.main-navigation ul ul li:first-child {
+	padding-top: 33px;
+	border-top: none;
 }
 
 .main-navigation li:hover > a {
 }
 
 .main-navigation ul ul :hover > a {
+	background-color: #888;
 }
 
 .main-navigation ul ul a:hover {
 }
 
 .main-navigation ul li:hover > ul {
-	left: auto;
+	left: -520px;
 }
 
-.main-navigation ul ul li:hover > ul {
-	left: 100%;
-}
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
@@ -649,6 +643,15 @@ a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.slides {
+	float: left;
+	margin: 0.5em 3.9% 0 0;
+}
+
+.slides ul {
+	list-style: none;
 }
 
 /*--------------------------------------------------------------
@@ -755,11 +758,6 @@ a:active {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-10.01 Header
---------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -913,4 +911,264 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+
+/*--------------------------------------------------------------
+Sanctuary
+--------------------------------------------------------------*/
+.home-page {
+	width: 960px;
+	margin: -136px auto 0 auto;
+	line-height: 0;
+}
+
+header {
+	position: fixed;
+	top: 55px;
+	left: 156px;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.6);
+	height: 100px;
+	width: 100%;
+}
+
+.image-group-1, .image-group-2,
+.image-group-3, .image-group-4,
+.image-group-5 {
+	position: relative;
+	z-index: -10;
+}
+
+h1.site-title {
+	font-family: 'Arvo';
+	font-size: 5.25em;
+	margin: -3.9rem 0 0 2rem;
+	letter-spacing: -0.5px;
+	color: white;
+	z-index: 2;
+}
+
+h1.site-title a {
+	text-decoration: none;
+}
+
+h1.site-title a:visited {
+	color: inherit;
+}
+
+h2.site-description {
+	font-family: 'Open Sans Condensed';
+	font-size: 1.75em;
+	letter-spacing: 0.1px;
+	margin: -2rem 0 0 2.5rem;
+	color: white;
+
+}
+
+
+.caption-group h3.light, h4.light {
+	color: white;
+}
+
+.caption-group h3.dark, h4.dark {
+	color: black;
+}
+
+.caption-group h3 {
+	position: absolute;
+	font-family: arvo;
+	text-transform: uppercase;
+	font-size: 1.75rem;
+	letter-spacing: 0.5px;
+}
+
+.caption-group h4 {
+	position: absolute;
+	font-family: 'Open Sans Condensed';
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+}
+
+.image-group-1 h3 {
+	right: 60px;
+	bottom: 235px;
+}
+
+.image-group-1 h4 {
+	right: 4px;
+	bottom: 242px;
+}
+
+.image-group-2 h3 {
+	right: 335px;
+	bottom: 350px;
+}
+
+.image-group-2 h4 {
+	right: 238px;
+	bottom: 356px;
+}
+
+.image-group-3 h3 {
+	right: 160px;
+	bottom: 180px;
+}
+
+.image-group-3 h4 {
+	right: 31px;
+	bottom: 185px;
+}
+
+.image-group-4 h3 {
+	right: 55px;
+	bottom: 170px;
+}
+
+.image-group-4 h4 {
+	right: 55px;
+	bottom: 175px;
+}
+
+.image-group-5 h3 {
+	right: 529px;
+	bottom: 248px;
+}
+
+.image-group-5 h4 {
+	right: 410px;
+	bottom: 255px;
+}
+
+footer {
+	clear: both;
+	width: 960px;
+	margin: -5em auto 0 auto;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+ul.social-menu {
+	list-style-type: none;
+	float: left;
+	margin-left: -2em;
+}
+
+ul.social-menu li {
+	float: left;
+	font-size: 2.5rem;
+	padding: 1rem;
+	color: #999;
+}
+
+ul.social-menu li a {
+	color: inherit;
+}
+
+.copyright-info {
+	font-size: .7rem;
+	margin-top: 2.5rem;
+	margin-right: .5rem;
+	color: #eee;
+}
+
+.cabin-page {
+	width: 960px;
+	height: 864px;
+	margin: 0 auto;
+}
+
+.cabin-info {
+	position: relative;
+	background-color: white;
+	margin-top: 130px;
+	height: 556px;
+}
+
+.image-section {
+	width: 60%;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+ul.slides {
+	margin-top: 29px;
+	margin-left: -20px;
+	height: 400px;
+}
+
+.text-section {
+	display: block;
+	width: 40%;
+	float: right;
+	margin-top: 25px;
+	font-family: 'Open Sans';
+	font-size: 0.9rem;
+	line-height: 1.1rem;
+}
+
+.text-section p {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 80px;
+}
+
+.text-section h3, h4 {
+	margin-bottom: 0;
+	margin-top: 1.3rem;
+	font-size: 0.9rem;
+	font-weight: bolder;
+}
+
+.flex-control-nav {
+	margin-left: -28px;
+}
+
+.flex-control-thumbs li {
+	padding: 12px 8px;
+	display: block;
+	float: left;
+}
+
+.flex-control-thumbs img {
+	height: 50px;
+	width: 50px;
+	opacity: 0.6;
+}
+
+.flex-active img {
+	opacity: 1.0;
+}
+
+.pricing-information a {
+	color: #609012;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h2.cabin-name {
+	font-family: arvo;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+.check-availability {
+	margin-top: 20px;
+	height: 34px;
+	width: 144px;
+	background-color: #5E7833;
+}
+
+.check-availability a {
+	text-decoration: none;
+	color: white;
+	font-size: 0.9rem;
+	line-height: 2.5;
+	padding-left: 10px;
+	font-family: 'Open Sans';
+}
+
+.check-availability a:visited {
+	color: white;
 }
