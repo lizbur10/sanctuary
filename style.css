@@ -941,6 +941,7 @@ header {
 }
 
 h1.site-title {
+	position: relative;
 	font-family: 'Arvo';
 	font-size: 5.25em;
 	margin: -3.9rem 0 0 2rem;
