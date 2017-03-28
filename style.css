@@ -575,10 +575,14 @@ a:active {
 	display: block;
 	margin-bottom: -21px;
 	padding: 10px 5px;
-	color: black;
+	color: #aaa;
 	border: solid 1px lightgray;
 	text-align: center;
 	background-color: white;
+}
+
+.main-navigation ul ul li:nth-child(2) a {
+	color: black;
 }
 
 .main-navigation ul ul li:first-child {
